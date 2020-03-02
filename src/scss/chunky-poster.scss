@@ -1,96 +1,138 @@
 .homepage-image {
-    @include media-breakpoint-up(lg) {
-        position: absolute;
-        width: 400px;
-        right: 100px;
-        top: 0;
-    }
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+    width: 400px;
+    right: 100px;
+    top: 0;
+  }
 }
 
-.author .name a, .author .social a {
-    color: $gray-900;
-    text-decoration: none;
+.author .name a,
+.author .social a {
+  color: $gray-900;
+  text-decoration: none;
 }
 
 blockquote {
-    color: $gray-400;
-    border-left: 6px solid $gray-400;
-    padding-left: $spacer;
+  color: $gray-400;
+  border-left: 6px solid $gray-400;
+  padding-left: $spacer;
 }
 
 code {
-    background-color: $gray-100;
-    border-radius: $border-radius-sm;
-    padding: .125rem .2rem;
+  background-color: $gray-100;
+  border-radius: $border-radius-sm;
+  padding: 0.125rem 0.2rem;
 }
 
-code[class*=language-], pre[class*=language-] {
-    font-family: $font-family-monospace;
-    @include font-size($code-font-size);
+code[class*='language-'],
+pre[class*='language-'] {
+  font-family: $font-family-monospace;
+  @include font-size($code-font-size);
 }
 
-figure.highlight pre:not([class*=language-]) {
-    padding: 1em;
-    margin: .5em 0;
-    overflow: auto;
-    background-color: $gray-100;
+figure.highlight pre:not([class*='language-']) {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  background-color: $gray-100;
 }
 
 pre code {
-    padding: 0;
-    background-color: transparent;
+  padding: 0;
+  background-color: transparent;
 }
 
-.latest h2 a, .navbar a, .card > a, a.badge {
-    text-decoration: none;
+.latest h2 a,
+.navbar a,
+.card > a,
+a.badge {
+  text-decoration: none;
 }
 
 figure.highlight {
-    margin-left: -($grid-gutter-width / 2);
-    margin-right: -($grid-gutter-width / 2);
+  margin-left: -($grid-gutter-width / 2);
+  margin-right: -($grid-gutter-width / 2);
 
-    @include media-breakpoint-up(md) {
-        margin-left: 0;
-        margin-right: 0;
-    }
+  @include media-breakpoint-up(md) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 img[data-src] {
-    opacity: 0;
-    @include transition($transition-fade);
+  opacity: 0;
+  @include transition($transition-fade);
 
-    &.loaded {
-        opacity: 1;
-    }
+  &.loaded {
+    opacity: 1;
+  }
 }
 
 #navbar-main-menu {
-    transition: top 0.2s ease;
+  transition: top 0.2s ease;
 
-    .nav-item .nav-link {
-        font-size: $navbar-brand-font-size;
-    }
+  .nav-item .nav-link {
+    font-size: $navbar-brand-font-size;
+  }
 }
 
 ul.share.nav {
-    .nav-link {
-        padding: $nav-link-padding-y 0.2rem;
-        text-align: center;
-    }
+  .nav-link {
+    padding: $nav-link-padding-y 0.2rem;
+    text-align: center;
+  }
 }
 
 footer a:not(.icons) {
-    color: $gray-200;
+  color: $gray-200;
 }
 
 .display-4 {
-    font-family: Nunito;
-    font-weight: 700;
+  font-family: Nunito;
+  font-weight: 700;
 }
 
 .page-subtitle {
-    font-family: Nunito;
-    font-weight: 400;
-    font-size: 1.4em;
-    word-wrap: normal;
+  font-family: Nunito;
+  font-weight: 400;
+  font-size: 1.4em;
+  word-wrap: normal;
+}
+
+.cta-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.call-to-action {
+  margin: 10px 10px 0px 0px;
+  border-radius: 10px;
+  background-color: #ff5964;
+  color: white;
+  padding: 5px 10px;
+  border: 3px solid #ff5964;
+  font-weight: 600;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    0 100px 80px rgba(0, 0, 0, 0.07);
+}
+.call-to-action-secondary {
+  margin: 10px 20px 0 0;
+  border-radius: 10px;
+  background-color: white;
+  color: $gray-900;
+  padding: 5px 10px;
+  border: 3px solid $gray-900;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
