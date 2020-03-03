@@ -130,7 +130,7 @@ footer a:not(.icons) {
 }
 
 table tr th:empty {
-  display: none;
+  visibility: hidden;
 }
 
 table tr th {
