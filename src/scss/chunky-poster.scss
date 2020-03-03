@@ -129,6 +129,16 @@ footer a:not(.icons) {
   font-weight: 600;
 }
 
+table tr th:empty {
+  display: none;
+}
+
+table tr th {
+  background-color: white !important;
+  color: black !important;
+  border: 0px 0px 1px 0px solid black !important;
+}
+
 @media (max-width: 768px) {
   .cta-wrapper {
     display: flex;
