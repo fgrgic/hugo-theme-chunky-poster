@@ -158,3 +158,12 @@ h5 {
     flex-wrap: wrap;
   }
 }
+
+::selection {
+  background: #ff5964;
+  color: white;
+}
+::-moz-selection {
+  background: #ff5964;
+  color: white;
+}
